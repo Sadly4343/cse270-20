@@ -60,4 +60,9 @@ def test_fix_agreement():
     fix_agreement(sentence)
     assert sentence == ['the', 'ocean', 'was','runs','runs','runs']
 def test_build_sentence():
-    pass
+    seed_word = ['run','ocean']
+    structuress = ['V','N']
+    data = {"verbs": ['run','play'],
+    "nouns": ['ocean']}
+    result = build_sentence(seed_word,structuress,data)
+    assert result == 'run'
