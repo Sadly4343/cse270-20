@@ -60,9 +60,9 @@ def test_fix_agreement():
     fix_agreement(sentence)
     assert sentence == ['the', 'ocean', 'was','runs','runs','runs']
 def test_build_sentence():
-    seed_word = ['run','ocean']
-    structuress = ['V','N']
+    seed_word = ['A','A','A','A','A','C','A']
+    structuress = ['ART','ADJ','VERB','ADV','NOUN','PRO','PREP']
     data = {"verbs": ['run','play'],
-    "nouns": ['ocean']}
+    "nouns": ['ocean','dog'],"adverbs": ['running','jumping'],"prepositions": ['between','about'],"adjectives":['happy','sad']}
     result = build_sentence(seed_word,structuress,data)
-    assert result == 'run'
+    assert result == 'The happy run running oceans i between'
